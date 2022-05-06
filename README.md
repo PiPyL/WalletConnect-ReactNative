@@ -21,7 +21,7 @@ Step 5: Add code below in manifest at metro.config.js
     
 Step 6: Run “npx pod-install” (for iOS)
 
-Step 7: Add xml below at AndroidManifest.xml (main)
+Step 7: Add xml below at AndroidManifest.xml (main) (for Android)
     <queries>
         <intent>
             <action android:name="android.intent.action.VIEW" />
