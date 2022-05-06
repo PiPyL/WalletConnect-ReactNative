@@ -14,7 +14,6 @@ Step 5: Add code below in manifest at metro.config.js
             crypto: require.resolve('react-native-crypto')
         }
     }
-
 Step 4: Run “npx pod-install” (for iOS)
 Step 5: Add xml below at AndroidManifest.xml (main)
     <queries>
