@@ -18,13 +18,27 @@ const App = () => {
         alignItems: "center",
       }}
     >
-      <TouchableOpacity
-        onPress={() => {
-          connector.connect();
-        }}
-      >
-        <Text>Connect</Text>
-      </TouchableOpacity>
+      {connector.connected ? (
+        <View>
+          <Text>{`Connected: ${connector.accounts}`}</Text>
+          <TouchableOpacity
+            style={{ marginTop: 16 }}
+            onPress={() => {
+              connector.killSession();
+            }}
+          >
+            <Text>Disconnect</Text>
+          </TouchableOpacity>
+        </View>
+      ) : (
+        <TouchableOpacity
+          onPress={() => {
+            connector.connect();
+          }}
+        >
+          <Text>Connect</Text>
+        </TouchableOpacity>
+      )}
     </View>
   );
 };
