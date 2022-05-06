@@ -4,9 +4,13 @@ Instructions for setting up walletconnect with react native
 Docs: https://docs.walletconnect.com/quick-start/dapps/react-native
 
 Step 1: Run “npx rn-nodeify --hack --install process,crypto,events,constant,console,stream,url,util”
+
 Step 2: Run “npm i @walletconnect/react-native-dapp – save”
+
 Step 3: Run “npm i react-native-svg @react-native-async-storage/async-storage –save”
+
 Step 4: Add “import './shim'” at index.js
+
 Step 5: Add code below in manifest at metro.config.js
     resolver: {
         extraNodeModules: {
@@ -14,8 +18,10 @@ Step 5: Add code below in manifest at metro.config.js
             crypto: require.resolve('react-native-crypto')
         }
     }
-Step 4: Run “npx pod-install” (for iOS)
-Step 5: Add xml below at AndroidManifest.xml (main)
+    
+Step 6: Run “npx pod-install” (for iOS)
+
+Step 7: Add xml below at AndroidManifest.xml (main)
     <queries>
         <intent>
             <action android:name="android.intent.action.VIEW" />
